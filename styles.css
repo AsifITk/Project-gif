@@ -1,0 +1,270 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Fugaz One", cursive;
+}
+/* header start */
+.header {
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo {
+  width: 9vw;
+}
+.header > * {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6vw;
+}
+.search-options > * {
+  padding-left: 5vw;
+  z-index: 10;
+}
+
+.search-options {
+  position: relative;
+}
+.move {
+  position: absolute;
+  width: 7vw;
+  height: 5vh;
+  background-color: #23d5ab;
+  border-radius: 10px;
+  z-index: 1;
+  left: 4.3vw;
+  transition: 0.5s;
+}
+
+.push {
+  left: 15.2vw;
+  width: 10vw;
+}
+
+.gif-options {
+  position: relative;
+}
+.gif-options > * {
+  padding-left: 5vw;
+  z-index: 10;
+}
+
+.move1 {
+  position: absolute;
+  width: 5vw;
+  height: 5vh;
+  background-color: rgba(17, 255, 0, 0.618);
+  border-radius: 10px;
+  left: 4vw;
+  z-index: 1;
+  transition: 1s;
+}
+
+.push2 {
+  left: 13vw;
+  width: 8vw;
+}
+
+/* header end  */
+
+/*container start  */
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 94vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/df1w9wm-992efd2d-6c8c-4ff1-abbe-4c8e0066b56e.gif");
+  background-position: center;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* z-index: -2; */
+}
+.container div input {
+  position: absolute;
+  z-index: 100;
+  /* make a gif search input box */
+
+  width: 40vw;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: #23d5ab;
+  border: none;
+  outline: none;
+  font-size: 1.6vw;
+  color: #fff;
+  padding: 0.5vw;
+
+  transition: 0.5s;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 8, 8, 0.311);
+  z-index: -1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 20vh;
+  color: rgb(235 3 3);
+}
+.input-search {
+  width: 40vw;
+  height: 5vh;
+  border-radius: 10px;
+
+  border: none;
+  outline: none;
+  font-size: 1.6vw;
+
+  padding: 0.5vw;
+  transition: 0.5s;
+}
+.card p {
+  font-size: 4vh;
+}
+.input {
+  width: 50vw;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  font-size: 3vh;
+  padding-left: 5vw;
+}
+.search-logo {
+  position: relative;
+  top: 50px;
+  left: 10px;
+  width: 30px;
+  display: inline;
+}
+.desc {
+  font-size: 2vh;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(249, 63, 63);
+  padding: 50px;
+  text-align: center;
+}
+
+/*  container end */
+
+/* items start */
+
+.items-container {
+  padding-top: 60px;
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gif-img {
+  padding: 5px;
+}
+
+/* items End */
+/* loading
+ */
+
+.grid {
+  display: grid;
+  justify-items: center;
+  margin-top: 30vh;
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  grid-area: 1/1;
+}
+
+.green {
+  background-color: rgb(50, 205, 50, 0.7);
+  animation: move-right 2s linear infinite;
+}
+
+.orange {
+  background-color: rgb(255, 165, 0, 0.9);
+  animation: move-left 2s linear infinite;
+}
+
+@keyframes move-right {
+  0%,
+  100% {
+    margin-right: 0;
+  }
+
+  25% {
+    margin-right: 250px;
+  }
+  50% {
+    z-index: 2;
+  }
+
+  75% {
+    margin-right: -250px;
+  }
+}
+
+@keyframes move-left {
+  0%,
+  100% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 250px;
+  }
+
+  75% {
+    margin-left: -250px;
+  }
+}
+
+.show {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}
